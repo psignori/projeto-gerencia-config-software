@@ -17,9 +17,9 @@ jobs:
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
           
     - run : |
-        docker build -t ghcr.io/psignori/projeto-gerencia-config-software/teste:latest -f Dockerfile .
-        docker tag ghcr.io/psignori/projeto-gerencia-config-software/teste:latest ghcr.io/psignori/projeto-gerencia-config-software/teste
+        docker build -t ghcr.io/psignori/projeto-gerencia-config-software:latest -f Dockerfile .
+        docker tag ghcr.io/psignori/projeto-gerencia-config-software:latest ghcr.io/psignori/projeto-gerencia-config-software
         
     - run : |
-        docker push ghcr.io/psignori/projeto-gerencia-config-software/teste:latest
-        docker push ghcr.io/psignori/projeto-gerencia-config-software/teste:${{ github.sha }}
+        docker push ghcr.io/psignori/projeto-gerencia-config-software:latest
+        docker push ghcr.io/psignori/projeto-gerencia-config-software:${{ github.sha }}
