@@ -13,7 +13,7 @@ jobs:
     - uses: azure/docker-login@v1
       with:
         login-server: ghcr.io
-        usarname: ${{ secrets.GH_PACKAGES_USER}}
+        username: ${{ secrets.GH_PACKAGES_USER}}
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
           
     - run : |
