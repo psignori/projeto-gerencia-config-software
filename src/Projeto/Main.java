@@ -8,7 +8,6 @@ package Projeto;
 import apoio.conexaoBD;
 import javax.swing.JOptionPane;
 import negocios.pessoas;
-import telas.TelaAlterarCadastro;
 import telas.TelaLogin;
 import telas.TelaCadastrarPessoas;
 
