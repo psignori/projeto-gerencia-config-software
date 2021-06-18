@@ -11,6 +11,8 @@ CREATE DATABASE "ProjQuarta"
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1;
 
+\c ProjQuarta
+
 -- Criando Tabelas
 
 -- Table: public.pessoa

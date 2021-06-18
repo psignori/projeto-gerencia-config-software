@@ -1,0 +1,12 @@
+version: '3'
+volume:
+    dados:
+services:
+    db: 
+        image: postgres:9.6
+        volumes: 
+            # volume dos dados
+            - dados:/var/lib/postgresql/data
+            # scrpits
+            - ./scripts:/scrpits
+            - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql

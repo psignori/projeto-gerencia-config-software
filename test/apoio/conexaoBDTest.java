@@ -5,8 +5,13 @@
  */
 package apoio;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import java.sql.Connection;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -16,20 +21,31 @@ public class conexaoBDTest {
     
     public conexaoBDTest() {
     }
-
-    @Test
-    public void testGetInstance() {
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
     }
 
+
+    /**
+     * Test of getConnection method, of class conexaoBD.
+     */
     @Test
     public void testGetConnection() {
         System.out.println("teste de conexão");
         conexaoBD con = new conexaoBD ();
         assertNotEquals(con, con.getConnection());
-    }
-
-    @Test
-    public void testShutDown() {
-    }
-    
+    }    
 }
