@@ -1,7 +1,9 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1
+FROM homologacao:1.0
 
-RUN dotnet restore
+COPY . .
 
-RUN dotnet build
+RUN jar build Main.jar
 
-RUN dotnet publish -c Release
+EXPOSE 8081
+
+ENTRYPOINT [ "./Main" ]
