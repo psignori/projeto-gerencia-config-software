@@ -2,16 +2,15 @@ pipeline{
     environment{
         BRANCH_NAME = "${env.BRANCH_NAME}"
     }
-    agent any
+    agent {docker {iamge 'cameronmcnz/ant-jdk8-git:latest' } }
     stages {
-        stage ('testando'){
+        stage ('Log the ant version'){
             steps{
                 sh 'ant -version'
             }
         }
         stage ('GitHub Jenkins Ant Build'){
             steps {
-                git 'https://github.com/psignori/projeto-gerencia-config-software.git'
                 sh 'ant clean compile test package build.xml'
             }
         }
