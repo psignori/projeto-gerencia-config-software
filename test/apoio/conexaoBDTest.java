@@ -18,30 +18,6 @@ import static org.junit.Assert.*;
  * @author patri
  */
 public class conexaoBDTest {
-    
-    public conexaoBDTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
-
-
-    /**
-     * Test of getConnection method, of class conexaoBD.
-     */
     @Test
     public void testGetConnection() {
         System.out.println("teste de conexão");
