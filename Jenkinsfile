@@ -12,7 +12,7 @@ pipeline{
         stage ('GitHub Jenkins Ant Build'){
             steps {
                 git 'https://github.com/psignori/projeto-gerencia-config-software.git'
-                sh 'ant clean compile test package war'
+                sh 'ant clean compile test package build.xml'
             }
         }
     }
