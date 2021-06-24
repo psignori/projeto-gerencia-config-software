@@ -4,6 +4,8 @@ pipeline{
     }
     agent any
     stages {
-        stage ('testando')
+        stage ('testando'){
+            
+        }
     }
 }
