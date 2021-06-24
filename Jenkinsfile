@@ -1,7 +1,4 @@
 pipeline{
-    environment{
-        BRANCH_NAME = "${env.BRANCH_NAME}"
-    }
     agent {docker {image 'cameronmcnz/ant-jdk8-git:latest' } }
     stages {
         stage ('Log the ant version'){
