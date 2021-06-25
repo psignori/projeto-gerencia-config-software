@@ -1,12 +1,35 @@
-version: '3'
-volume:
-    dados:
+version: "3"
 services:
-    db: 
-        image: postgres:9.6
-        volumes: 
-            # volume dos dados
-            - dados:/var/lib/postgresql/data
-            # scrpits
-            - ./scripts:/scrpits
-            - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+  db:
+    container_name: pg-prod
+    image: postgres:9.6
+    networks:
+      - prod_net_back
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=ProjQuarta
+    volumes:
+      - prod_postgresql:/var/lib/postgresql
+      - prod_postgresql_data:/var/lib/postgresql/data
+
+  homolog:
+    container_name: homolog
+    image: homolog:build_${BUILD_NUMBER}
+    build:
+      context: .
+
+    #ports:
+    #  - 9998:8080
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWD=postgres
+      #- DATABASE_UPDATE=none
+    depends_on:
+      - db
+
+
+volumes:
+  prod_postgresql:
+  prod_postgresql_data:
