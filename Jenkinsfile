@@ -4,7 +4,7 @@ pipeline{
     stages {
         stage ('test'){
             steps{
-                sh 'ant test'
+                
             }
         }
         stage ('build'){
