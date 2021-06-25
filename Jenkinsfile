@@ -18,9 +18,10 @@ pipeline{
                 sh 'ant jar'
             }
         }
-        stage ('docker'){
+        stage ('deploy Prod'){
             steps {
                 echo 'Entrando na maquina de homologação e baixando imagem atualizada da aplicação'
+                sh 'docker-compose build'
                 sh 'docker-compose up'
             } 
         }
