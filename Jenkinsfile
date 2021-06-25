@@ -1,9 +1,6 @@
 pipeline{
-    agent any {
-         docker {
-             image 'ant:1.10.7' 
-        } 
-    }
+    agent any 
+    
     stages {
         stage ('build'){
             steps{
