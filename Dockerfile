@@ -1,4 +1,4 @@
-FROM jdk:16.0.1-slim-buster
+FROM 16.0.1-slim-buster
 
 COPY . /bin/bash/
 
