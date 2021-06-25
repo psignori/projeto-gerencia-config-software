@@ -16,9 +16,6 @@ pipeline{
                 sh 'ant compile'
                 sh 'ant deploy'
                 sh 'ant jar'
-                sh 'git add .'
-                sh 'git commit -m "build"'
-                sh 'git push'
             }
         }
         stage ('docker'){
