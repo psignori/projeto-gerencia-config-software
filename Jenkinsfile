@@ -5,14 +5,6 @@ pipeline{
         stage ('test'){
             steps{
                 echo 'ola'
-                sh 'ant init'
-                sh 'ant deps-jar'
-                sh 'ant init'
-                sh 'ant deps-clean'
-                sh 'ant clean'
-                sh 'ant compile-test'
-                sh 'ant test-report'
-                sh 'ant test'
             }
         }
         stage ('build'){
