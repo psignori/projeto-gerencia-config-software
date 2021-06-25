@@ -16,7 +16,6 @@ pipeline{
                 sh 'ant compile'
                 sh 'ant deploy'
                 sh 'ant jar'
-                sh 'ant'
             }
         }
         stage ('docker'){
