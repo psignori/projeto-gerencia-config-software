@@ -1,14 +1,23 @@
 pipeline{
-    agent {docker {image 'cameronmcnz/ant-jdk8-git:latest' } }
+    agent {
+         docker {
+             image 'ant:1.10.7' 
+        } 
+    }
     stages {
-        stage ('Log the ant version'){
+        stage ('build'){
             steps{
-                sh 'ant -version'
+                sh 'ant clean compile test package build.xml'
             }
         }
-        stage ('GitHub Jenkins Ant Build'){
+        stage ('Test'){
             steps {
-                sh 'ant clean compile test package build.xml'
+                sh 'ant test'
+            }
+            post {
+                always {
+                    junit 'caminho'
+                }
             }
         }
     }
