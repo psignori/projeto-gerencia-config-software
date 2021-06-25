@@ -2,14 +2,21 @@ pipeline{
     agent any 
     
     stages {
-        stage ('build'){
+        stage ('test'){
             steps{
-                sh 'ant clean compile test package build.xml'
+                sh 'ant test'
             }
         }
-        stage ('Test'){
+        stage ('build'){
             steps {
-                sh 'ant test'
+                sh 'ant init'
+                sh 'ant deps-clean'
+                sh 'ant clean'
+                sh 'ant init'
+                sh 'ant deps-jar'
+                sh 'ant compile'
+                sh 'ant deploy'
+                sh 'ant jar'
             }
             post {
                 always {
