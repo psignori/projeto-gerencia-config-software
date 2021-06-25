@@ -3,8 +3,6 @@ services:
   db:
     container_name: pg-prod
     image: postgres:9.6
-    networks:
-      - prod_net_back
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=ProjQuarta
