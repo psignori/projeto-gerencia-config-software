@@ -10,7 +10,6 @@ pipeline{
                 sh 'ant init'
                 sh 'ant deps-clean'
                 sh 'ant clean'
-                sh 'ant compile'
                 sh 'ant compile-test'
                 sh 'ant test-report'
                 sh 'ant test'
