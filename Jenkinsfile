@@ -1,5 +1,5 @@
 pipeline{
-    agent {
+    agent any {
          docker {
              image 'ant:1.10.7' 
         } 

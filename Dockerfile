@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM postgres:9.6
 
 #Create Ant Dir in Docker container
 RUN mkdir -p /opt/ant/
