@@ -1,5 +1,5 @@
 pipeline{
-    agent any 
+    agent { dockerfile true }
     
     stages {
         stage ('test'){
@@ -17,13 +17,6 @@ pipeline{
                 sh 'ant deploy'
                 sh 'ant jar'
             }
-        }
-        stage ('deploy Prod'){
-            steps {
-                echo 'Entrando na maquina de homologação e baixando imagem atualizada da aplicação'
-                bat 'docker-compose build'
-                bat 'docker-compose up -d'
-            } 
         }
     }
 }
