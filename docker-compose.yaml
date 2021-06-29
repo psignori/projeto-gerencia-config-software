@@ -1,7 +1,7 @@
 version: "3"
 services:
   db:
-    container_name: pg-prod
+    container_name: pg-homolog
     image: postgres:9.6
     environment:
       - POSTGRES_PASSWORD=postgres
