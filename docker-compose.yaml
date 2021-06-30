@@ -4,7 +4,6 @@ services:
     build: .
     container_name: homolog
     image: homolog:latest
-    tty: true
 
 
     #ports:
