@@ -20,8 +20,8 @@ pipeline{
         }
         stage ('Deploy para homologacao'){
             steps {
-                sh 'sudo -s docker-compose build'
-                sh 'sudo -s docker-compose up -d '
+                sh 'docker-compose build'
+                sh 'docker-compose up -d '
             }
         }
     }
