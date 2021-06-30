@@ -12,7 +12,6 @@ services:
 
   homolog:
     container_name: homolog
-    mkdir: /bin/bash
     image: homolog:build_${BUILD_NUMBER}
     privileged: true
     user: root
