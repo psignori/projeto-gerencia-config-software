@@ -25,7 +25,7 @@ public class Main {
             pessoas p = new pessoas (); 
             TelaLogin tl = new TelaLogin ();
             tl.setVisible(true);
-            System.out.println("Essa é a aplicação do Juca");
+            System.out.println("Essa é a aplicação do Patrick");
         }else {
             JOptionPane.showMessageDialog(null, "Erro ao conectar no banco!");
         }
