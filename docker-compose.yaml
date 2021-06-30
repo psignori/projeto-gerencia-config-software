@@ -1,10 +1,14 @@
 version: "3"
 services:
   homolog:
+    build: .
     container_name: homolog
     image: homolog:latest
-    build:
-      context: .
+    volumes: 
+      -./:/bin/bash
+    working_dir: /bin/bash
+    tty: true
+
 
     #ports:
     #  - 9998:8080
@@ -15,4 +19,4 @@ services:
       - DATABASE_PASSWD=postgres
       #- DATABASE_UPDATE=none
     
-  tty: true
+  
