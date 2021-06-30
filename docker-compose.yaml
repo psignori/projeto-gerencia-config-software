@@ -3,6 +3,7 @@ services:
   homolog:
     container_name: homolog
     image: homolog:latest
+    name: homolog:latest
     build:
       context: .
 
