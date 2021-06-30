@@ -1,5 +1,5 @@
 pipeline{
-    agent { dockerfile true }
+    agent { any }
     
     stages {
         stage ('test'){
@@ -17,6 +17,9 @@ pipeline{
                 sh 'ant deploy'
                 sh 'ant jar'
             }
+        }
+        stage ('Deploy para homologacao'){
+            sh 'docker-compose build -t homolog:build_'
         }
     }
 }
