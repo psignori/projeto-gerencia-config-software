@@ -1,15 +1,5 @@
 version: "3"
 services:
-  db:
-    container_name: pg-homolog
-    image: postgres:9.6
-    environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=ProjQuarta
-    volumes:
-      - prod_postgresql:/var/lib/postgresql
-      - prod_postgresql_data:/var/lib/postgresql/data
-
   homolog:
     container_name: homolog
     image: homolog:latest
@@ -26,10 +16,3 @@ services:
       - DATABASE_USER=postgres
       - DATABASE_PASSWD=postgres
       #- DATABASE_UPDATE=none
-    depends_on:
-      - db
-
-
-volumes:
-  prod_postgresql:
-  prod_postgresql_data:
