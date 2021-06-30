@@ -4,4 +4,6 @@ COPY . .
 
 RUN apt install vim
 
+CMD [ "y" ]
+
 
