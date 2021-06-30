@@ -1,9 +1,6 @@
-FROM homologacao:1.0
+FROM homologacao:2.0
 
 COPY . .
 
-RUN apt install vim
-
-CMD [ "y" ]
 
 
