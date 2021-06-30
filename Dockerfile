@@ -1,7 +1,6 @@
-FROM ubuntu:20.04
+FROM homologacao:1.0
 
 COPY . .
 
-RUN npm install
 
 
