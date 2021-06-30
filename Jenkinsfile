@@ -20,7 +20,7 @@ pipeline{
         }
         stage ('Deploy para homologacao'){
             steps {
-                sh 'scp -r workspace user@172.17.255.255:/bin/bash '
+                sh 'scp -r workspace user@172.17.0.4:/bin/bash '
             }
         }
     }
