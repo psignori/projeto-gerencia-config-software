@@ -12,7 +12,7 @@ services:
 
   homolog:
     container_name: homolog
-    image: homolog:build_${BUILD_NUMBER}
+    image: homolog:latest
     privileged: true
     user: root
     build:
