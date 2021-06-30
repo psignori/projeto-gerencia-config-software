@@ -4,9 +4,6 @@ services:
     build: .
     container_name: homolog
     image: homolog:latest
-    volumes: 
-      -./:/bin/bash
-    working_dir: /bin/bash
     tty: true
 
 
