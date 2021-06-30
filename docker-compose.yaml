@@ -3,8 +3,6 @@ services:
   homolog:
     container_name: homolog
     image: homolog:latest
-    privileged: true
-    user: root
     build:
       context: .
 
