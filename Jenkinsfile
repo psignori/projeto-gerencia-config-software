@@ -19,7 +19,9 @@ pipeline{
             }
         }
         stage ('Deploy para homologacao'){
-            sh 'docker-compose build -t homolog:build_'
+            stapes {
+                sh 'docker-compose build -t homolog:build_'
+            }
         }
     }
 }
