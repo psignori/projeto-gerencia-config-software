@@ -20,6 +20,7 @@ pipeline{
         }
         stage ('Deploy para homologacao'){
             steps {
+                sh 'docker stop '
                 sh 'docker-compose build'
                 sh 'docker-compose up -d  '
             }
