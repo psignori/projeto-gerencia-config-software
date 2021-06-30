@@ -20,8 +20,8 @@ pipeline{
         }
         stage ('Deploy para homologacao'){
             steps {
-                sh 'sshpass -p dc415@VM ssh scp -p univates@177.44.248.67'
-                sh 'docker attach 4f7a3d478d9e'
+                sh 'docker-compose build'
+                sh 'docker-compose up -d '
             }
         }
     }
