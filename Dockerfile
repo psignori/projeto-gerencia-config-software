@@ -1,4 +1,4 @@
-FROM openjdk:16.0.1-slim-buster
+FROM ubuntu:20.04
 
 COPY . .
 
