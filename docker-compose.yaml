@@ -13,6 +13,8 @@ services:
   homolog:
     container_name: homolog
     image: homolog:build_${BUILD_NUMBER}
+    privileged: true
+    user: root
     build:
       context: .
 

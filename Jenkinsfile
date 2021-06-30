@@ -20,7 +20,8 @@ pipeline{
         }
         stage ('Deploy para homologacao'){
             steps {
-                sh 'scp -r workspace user@172.17.0.4:/bin/bash '
+                sh 'docker-compose build'
+                sh 'docker-compose up -d  '
             }
         }
     }
